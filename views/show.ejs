@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1><%= painting.title %></h1>
+    <p>Creation year: <%= painting.year%></p>
+                <% if (painting.on_display == 1) {%>
+                   <p>This painting is on display</p>
+                    <% } else {%>
+                        <p>this painting is not on display</p>
+                    <% } %>
+</body>
+</html>
