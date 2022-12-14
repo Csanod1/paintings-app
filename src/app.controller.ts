@@ -57,4 +57,12 @@ export class AppController {
     );
     return { painting: rows[0] };
   }
+
+  @Post('paintings/:id/delete')
+  async deletePainting(@Param('id') id: number) {
+    const [result] = await db.execute('DELETE FROM paintings WHERE id = ?', [
+      id,
+    ]);
+    return {};
+  }
 }
